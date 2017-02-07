@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsfeedService } from "./newsfeed.service";
 
-import{ INewsfeed } from './newsfeed';
+import{ INewsfeed } from '../interface/newsfeed';
 
 @Component({
   moduleId: module.id,

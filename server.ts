@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname, '/dist')));
 app.use('/friends', friends);
 app.use('/newsfeed', newsfeed);
 
-// Catch all other routes and return the index file
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });

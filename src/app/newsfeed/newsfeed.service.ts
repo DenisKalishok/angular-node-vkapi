@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
-import{ INewsfeed } from './newsfeed';
+import{ INewsfeed } from '../interface/newsfeed';
 
 import { Observable } from "rxjs";
 import 'rxjs/Rx';
