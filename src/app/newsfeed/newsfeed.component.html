@@ -1,4 +1,5 @@
-<div *ngFor="let newsfeed of newsfeed?.items">
-  <p>id: {{ newsfeed.post_id }}</p>
-  <p>name: {{ newsfeed.text}}</p>
+<div *ngFor="let news of newsfeed?.groups">
+  <img src="{{ news.photo_50 }}" />
+  <p>type: {{ news.type}}</p>
+  <p>name: {{ news.name }}</p>
 </div>

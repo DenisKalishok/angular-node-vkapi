@@ -1,6 +1,6 @@
 import { IBanInfo } from './ban-info';
 import { ICity } from './city';
-import { IContactsGroup } from './contacts-group';
+import { IContactGroup } from './contact-group';
 import { ICountersGroup } from './counters-group';
 import { ICountry } from './country';
 import { ICover } from './cover';
@@ -8,7 +8,7 @@ import { ILink } from './link';
 import { IMarket } from './market';
 import { IPlace } from './place';
 
-/*Объект содержит информацию о сообществе ВКонтакте*/
+/*Объект содержит информацию о сообществе*/
 export interface IGroup {
 
   id: number;
@@ -36,7 +36,7 @@ export interface IGroup {
   can_upload_doc: number;
   can_upload_video: number;
   city: ICity;
-  contacts: IContactsGroup[];
+  contacts: IContactGroup[];
   counters: ICountersGroup;
   country: ICountry;
   cover: ICover;

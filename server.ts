@@ -1,22 +1,17 @@
-/**
- * Created by denis on 05.02.2017.
- */
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
 const config = require('./config');
 
 // Get routes
+const users = require('./routes/users');
 const friends = require('./routes/friends');
 const newsfeed = require('./routes/newsfeed');
 
 const app = express();
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(express.static(path.join(__dirname, '/dist')));
 
+app.use('/users', users);
 app.use('/friends', friends);
 app.use('/newsfeed', newsfeed);
 

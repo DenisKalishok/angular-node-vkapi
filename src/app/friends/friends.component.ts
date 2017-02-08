@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FriendsService } from './friends.service';
-import {IFriends} from "./friends";
+import { IFriends } from "../interface/friends";
 
 @Component({
   moduleId: module.id,
   selector: 'friends-list',
   templateUrl: './friends.component.html',
   styleUrls: ['./friends.component.css'],
-  providers: [FriendsService]
+  providers: [ FriendsService ]
 })
 export class FriendsComponent implements OnInit {
 
   friends: IFriends;
 
-  constructor(private friendsService: FriendsService) { }
+  constructor( private friendsService: FriendsService ) { }
 
   getFriendsList(){
     this.friendsService.getFriendsList()

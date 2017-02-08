@@ -1,5 +1,5 @@
 /*информация из блока контактов публичной страницы*/
-export interface IContactsGroup {
+export interface IContactGroup {
 
   user_id: number;
   desc: string;

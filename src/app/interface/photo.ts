@@ -1,5 +1,6 @@
 import { ISizes } from './sizes';
 
+/*Объект, описывающий фотографию*/
 export interface IPhoto {
 
   id: number;

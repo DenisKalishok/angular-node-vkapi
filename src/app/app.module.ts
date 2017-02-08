@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FriendsComponent } from './friends/friends.component';
 import { NewsfeedComponent } from './newsfeed/newsfeed.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FriendsComponent,
-    NewsfeedComponent
+    NewsfeedComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

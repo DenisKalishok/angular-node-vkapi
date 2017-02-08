@@ -1,15 +1,11 @@
-/**
- * Created by denis on 05.02.2017.
- */
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const vksdk = require('vksdk');
 const router = express.Router();
 const config = require('../config');
 
-router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
 
 const vkapi = new vksdk({
   'appId'     : config.vk.appId,
