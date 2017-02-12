@@ -19,7 +19,7 @@ export class NewsfeedComponent implements OnInit {
   getNewsFeed(){
     this.newsfeedService.getNewsFeed()
       .subscribe(
-        data => { this.newsfeed=data; console.log(data); }
+        data => { this.newsfeed = data; console.log(data); }
       );
   }
 

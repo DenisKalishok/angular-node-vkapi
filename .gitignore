@@ -39,5 +39,4 @@ Thumbs.db
 /routes/users.js
 /routes/friends.js
 /routes/newsfeed.js
-config.json
 server.js

@@ -1,6 +1,24 @@
-<h3>Друзей: {{ friends?.count }}</h3>
-<div *ngFor="let friend of friends?.items">
-  <p>id: {{ friend.id }}</p>
-  <p>name: {{ friend.last_name }}</p>
-  <button (click)="deleteFriend(friend)">delete</button>
+<h3 class="center">Всего друзей: {{ friends?.count }}</h3>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset mdl-color--white mdl-shadow--2dp" *ngFor="let friend of friends?.items">
+    <div class="mdl-grid mdl-grid--no-spacing">
+
+      <div class="mdl-cell mdl-cell--4-col">
+        <img src="{{ friend.photo_200_orig }}" alt="">
+      </div>
+
+      <div class="mdl-cell mdl-cell--8-col">
+
+        <h4>{{ friend.first_name + ' ' + friend.last_name }}</h4>
+
+        <p>id: {{ friend.id }}</p>
+
+        <p>{{ friend.about }}</p>
+        <button (click)="deleteFriend(friend)">Удалить</button>
+
+      </div>
+
+    </div>
+
+  </div>
 </div>

@@ -18,17 +18,11 @@ const vkapi = new vksdk({
 
 vkapi.setToken(config.vk.accessToken);
 
+let fields = "nickname, domain, sex, bdate, city, country, timezone, photo_50, photo_100, photo_200_orig, has_mobile, contacts, education, online, relation, last_seen, status, can_write_private_message, can_see_all_posts, can_post, universities";
+
 router.get('/', function(req, res) {
 
-  vkapi.request('friends.get', {'user_id': config.vk.userId, 'fields': 'photo_100,online,last_seen', 'order': 'name'}, function(_o) {
-    res.setHeader('Content-Type', 'application/json');
-    res.json(_o.response);
-  });
-});
-
-router.post('/:id', function(req, res) {
-
-  vkapi.request('friends.add', {'user_id' :  req.params.id}, function(_o) {
+  vkapi.request('friends.get', {'user_id': config.vk.userId, 'fields': fields, 'order': 'name'}, function(_o) {
     res.setHeader('Content-Type', 'application/json');
     res.json(_o.response);
   });

@@ -1,5 +1,16 @@
-<div *ngFor="let news of newsfeed?.groups">
-  <img src="{{ news.photo_50 }}" />
-  <p>type: {{ news.type}}</p>
-  <p>name: {{ news.name }}</p>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset mdl-color--white mdl-shadow--2dp" *ngFor="let news of newsfeed?.items">
+    <div class="mdl-grid mdl-grid--no-spacing">
+
+      <div class="mdl-cell mdl-cell--12-col">
+
+        <p>type: {{ news.type }} </p>
+        <p>text: {{ news.text }}</p>
+        <p>time: {{ news.date }}</p>
+
+      </div>
+
+    </div>
+
+  </div>
 </div>

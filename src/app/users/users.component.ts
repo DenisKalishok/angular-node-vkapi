@@ -23,7 +23,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getUserInfo(72546667);
+    this.getUserInfo(412974046);
   }
 
 }
