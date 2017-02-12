@@ -1,5 +1,5 @@
 /*информация о городе*/
-export interface ICity {
+export interface ICity{
 
   id: number;
   title: string;

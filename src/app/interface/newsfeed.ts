@@ -1,10 +1,11 @@
-import { IPhoto } from './photo';
-import { IGroup } from './group';
+import { IGroup } from './main_objects/group';
 import { IProfile } from './profile';
 import { ILikes } from './likes';
 import { IReposts } from './reposts';
-import { IGeo } from './geo';
-import { INode } from './node';
+import { IAttachments_W } from "./attachments_w";
+import { IGeoNewsfeed } from './geo-newsfeed';
+import { INote } from './main_objects/note';
+
 
 export interface INewsfeed {
 
@@ -17,7 +18,7 @@ export interface INewsfeed {
     final_post: string;
     copy_owner_id: number;
     copy_post_id: number;
-    copy_history: INode[];
+    copy_history: INote[];
     copy_post_date: number;
     text: string;
     can_edit: number;
@@ -28,11 +29,8 @@ export interface INewsfeed {
     };
     likes: ILikes;
     reposts: IReposts;
-    attachments: {
-      type: string,
-      photo: IPhoto;
-    };
-    geo: IGeo;
+    attachments: IAttachments_W;
+    geo: IGeoNewsfeed;
     photos, photo_tags: {
       id: number;
       owner_id: number;
@@ -40,7 +38,7 @@ export interface INewsfeed {
       src: string;
       src_big: string;
     }[];
-    nodes: INode[];
+    notes: INote[];
     friends: {
       uid: number;
     }

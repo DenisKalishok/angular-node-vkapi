@@ -1,4 +1,4 @@
-import { IUser } from './user';
+import { IUser } from './main_objects/user';
 
 /*массив объектов пользователей с дополнительными полями*/
 export interface IProfile extends IUser{

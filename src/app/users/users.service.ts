@@ -6,7 +6,7 @@ import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { IUser } from '../interface/user';
+import { IUser } from '../interface/main_objects/user';
 
 @Injectable()
 export class UsersService {

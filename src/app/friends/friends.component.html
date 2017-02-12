@@ -13,8 +13,7 @@
 
         <p>id: {{ friend.id }}</p>
 
-        <p>{{ friend.about }}</p>
-        <button (click)="deleteFriend(friend)">Удалить</button>
+        <button  (click)="deleteFriend(friend.id)"><i class="material-icons">delete</i></button>
 
       </div>
 
